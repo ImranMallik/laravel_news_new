@@ -89,4 +89,5 @@ Route::middleware(['admin'])->group(function () {
   Route::get('setting', [SettingController::class, 'index'])->name('setting.index');
   Route::put('general-setting', [SettingController::class, 'updateGeneralSetting'])->name('setting-setting.update');
   Route::put('seo-setting', [SettingController::class, 'updateSeoSetting'])->name('seo-setting.update');
+  Route::put('appearance-setting', [SettingController::class, 'updateAppearanceSetting'])->name('appearance-setting.update');
 });
