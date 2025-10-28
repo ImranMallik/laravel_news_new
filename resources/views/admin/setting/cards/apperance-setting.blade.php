@@ -18,6 +18,8 @@
                     </div>
                 </div>
 
+
+
                 @error('color')
                     <p class="text-danger">{{ $message }}</p>
                 @enderror
