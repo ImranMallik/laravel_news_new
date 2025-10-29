@@ -1,0 +1,62 @@
+[2025-10-29 03:04:21] local.ERROR: The "--columns" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--columns\" option does not exist. at E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Input\\ArgvInput.php:226)
+[stacktrace]
+#0 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Input\\ArgvInput.php(153): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption('columns', 'uri,name,action...')
+#1 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Input\\ArgvInput.php(88): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption('--columns=uri,n...')
+#2 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Input\\ArgvInput.php(77): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('--columns=uri,n...', true)
+#3 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Input\\Input.php(53): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#4 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Command\\Command.php(276): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#5 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#6 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Application.php(1092): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Application.php(341): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\RouteListCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Application.php(192): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(197): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1234): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 E:\\xampp\\htdocs\\laravel_news_web\\artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#12 {main}
+"} 
+[2025-10-29 03:04:27] local.ERROR: Uncaught TypeError: array_replace_recursive(): Argument #2 must be of type array, int given in E:\xampp\htdocs\laravel_news_web\vendor\laravel\framework\src\Illuminate\Translation\FileLoader.php:129
+Stack trace:
+#0 E:\xampp\htdocs\laravel_news_web\vendor\laravel\framework\src\Illuminate\Translation\FileLoader.php(129): array_replace_recursive(Array, 1)
+#1 E:\xampp\htdocs\laravel_news_web\vendor\laravel\framework\src\Illuminate\Collections\Traits\EnumeratesValues.php(825): Illuminate\Translation\FileLoader->Illuminate\Translation\{closure}(Array, 'E:\\xampp\\htdocs...', 1)
+#2 E:\xampp\htdocs\laravel_news_web\vendor\laravel\framework\src\Illuminate\Translation\FileLoader.php(127): Illuminate\Support\Collection->reduce(Object(Closure), Array)
+#3 E:\xampp\htdocs\laravel_news_web\vendor\laravel\framework\src\Illuminate\Translation\FileLoader.php(68): Illuminate\Translation\FileLoader->loadPaths(Array, 'en', 'admin')
+#4 E:\xampp\htdocs\laravel_news_web\vendor\laravel\framework\src\Illuminate\Translation\Translator.php(334): Illuminate\Translation\FileLoader->load('en', 'admin', '*')
+#5 E:\xampp\htdocs\laravel_news_web\vendor\laravel\framework\src\Illuminate\Translation\Translator.php(247): Illuminate\Translation\Translator->load('*', 'admin', 'en')
+#6 E:\xampp\htdocs\laravel_news_web\vendor\laravel\framework\src\Illuminate\Translation\Translator.php(172): Illuminate\Translation\Translator->getLine('*', 'admin', 'en', NULL, Array)
+#7 E:\xampp\htdocs\laravel_news_web\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(993): Illuminate\Translation\Translator->get('admin', Array, 'en')
+#8 E:\xampp\htdocs\laravel_news_web\vendor\laravel\framework\src\Illuminate\Foundation\helpers.php(1025): trans('admin', Array, NULL)
+#9 Command line code(1): __('admin')
+#10 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught TypeError: array_replace_recursive(): Argument #2 must be of type array, int given in E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Translation\\FileLoader.php:129
+Stack trace:
+#0 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Translation\\FileLoader.php(129): array_replace_recursive(Array, 1)
+#1 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Collections\\Traits\\EnumeratesValues.php(825): Illuminate\\Translation\\FileLoader->Illuminate\\Translation\\{closure}(Array, 'E:\\\\xampp\\\\htdocs...', 1)
+#2 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Translation\\FileLoader.php(127): Illuminate\\Support\\Collection->reduce(Object(Closure), Array)
+#3 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Translation\\FileLoader.php(68): Illuminate\\Translation\\FileLoader->loadPaths(Array, 'en', 'admin')
+#4 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Translation\\Translator.php(334): Illuminate\\Translation\\FileLoader->load('en', 'admin', '*')
+#5 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Translation\\Translator.php(247): Illuminate\\Translation\\Translator->load('*', 'admin', 'en')
+#6 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Translation\\Translator.php(172): Illuminate\\Translation\\Translator->getLine('*', 'admin', 'en', NULL, Array)
+#7 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(993): Illuminate\\Translation\\Translator->get('admin', Array, 'en')
+#8 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\helpers.php(1025): trans('admin', Array, NULL)
+#9 Command line code(1): __('admin')
+#10 {main}
+  thrown at E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Translation\\FileLoader.php:129)
+[stacktrace]
+#0 {main}
+"} 
+[2025-10-29 03:04:27] local.ERROR: The "--columns" option does not exist. {"exception":"[object] (Symfony\\Component\\Console\\Exception\\RuntimeException(code: 0): The \"--columns\" option does not exist. at E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Input\\ArgvInput.php:226)
+[stacktrace]
+#0 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Input\\ArgvInput.php(153): Symfony\\Component\\Console\\Input\\ArgvInput->addLongOption('columns', 'uri,name,action...')
+#1 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Input\\ArgvInput.php(88): Symfony\\Component\\Console\\Input\\ArgvInput->parseLongOption('--columns=uri,n...')
+#2 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Input\\ArgvInput.php(77): Symfony\\Component\\Console\\Input\\ArgvInput->parseToken('--columns=uri,n...', true)
+#3 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Input\\Input.php(53): Symfony\\Component\\Console\\Input\\ArgvInput->parse()
+#4 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Command\\Command.php(276): Symfony\\Component\\Console\\Input\\Input->bind(Object(Symfony\\Component\\Console\\Input\\InputDefinition))
+#5 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(180): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#6 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Application.php(1092): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#7 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Application.php(341): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Foundation\\Console\\RouteListCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\symfony\\console\\Application.php(192): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#9 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(197): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#10 E:\\xampp\\htdocs\\laravel_news_web\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(1234): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#11 E:\\xampp\\htdocs\\laravel_news_web\\artisan(16): Illuminate\\Foundation\\Application->handleCommand(Object(Symfony\\Component\\Console\\Input\\ArgvInput))
+#12 {main}
+"} 
