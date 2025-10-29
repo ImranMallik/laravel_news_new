@@ -24,6 +24,13 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
     <link rel="icon" href="{{ asset($setting['site_favicon']) }}" type="image/png">
     <link href="{{ asset('frontend/assets/css/styles.css') }}" rel="stylesheet">
+
+    <style>
+        :root {
+            --colorPrimary: {{ $setting['site_color'] ?? '#000000' }};
+        }
+    </style>
+
 </head>
 
 

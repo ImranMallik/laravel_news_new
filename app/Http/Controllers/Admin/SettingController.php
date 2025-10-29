@@ -70,4 +70,20 @@ class SettingController extends Controller
 
         return redirect()->back();
     }
+
+    public function updateAppearanceSetting(Request $request)
+    {
+        $request->validate([
+            'color' => ['required', 'max:200']
+        ]);
+
+        Setting::updateOrCreate(
+            ['key' => 'site_color'],
+            ['value' => $request->color]
+        );
+
+        toast(__('Appearance Settings updated successfully.'), 'success');
+
+        return redirect()->back();
+    }
 }
