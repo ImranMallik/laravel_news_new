@@ -130,6 +130,21 @@
                  </ul>
              </li>
 
+             <li class="dropdown {{ setActive(['admin.role.*']) }}">
+                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown">
+                     <i class="fas fa-users-cog"></i>
+                     <span>{{ __('Access Management') }}</span>
+                 </a>
+                 <ul class="dropdown-menu">
+                     <li class="{{ setActive(['admin.role.index', 'admin.role.create']) }}">
+                         <a class="nav-link"
+                             href="{{ route('admin.role.index') }}">{{ __('Roles and Permissions') }}</a>
+                     </li>
+                 </ul>
+             </li>
+
+
+
              <li class="{{ setActive(['admin.setting.index']) }}">
                  <a class="nav-link" href="{{ route('admin.setting.index') }}">
                      <i class="fas fa-cog"></i>
