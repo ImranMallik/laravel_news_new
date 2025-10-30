@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AboutUsController;
 use App\Http\Controllers\Admin\AdController;
 use App\Http\Controllers\Admin\AdminAuthenticatedController;
+use App\Http\Controllers\Admin\AdminUserController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\ContractController;
 use App\Http\Controllers\Admin\ContractMessageController;
@@ -17,6 +18,8 @@ use App\Http\Controllers\Admin\HomeSectionSettingController;
 use App\Http\Controllers\Admin\LanguageController;
 use App\Http\Controllers\Admin\NewsController;
 use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Admin\RolePermissionController;
+use App\Http\Controllers\Admin\RoleUserController;
 use App\Http\Controllers\Admin\SettingController;
 use App\Http\Controllers\Admin\SocialCountController;
 use App\Http\Controllers\Admin\SocialLinkController;
@@ -90,4 +93,15 @@ Route::middleware(['admin'])->group(function () {
   Route::put('general-setting', [SettingController::class, 'updateGeneralSetting'])->name('setting-setting.update');
   Route::put('seo-setting', [SettingController::class, 'updateSeoSetting'])->name('seo-setting.update');
   Route::put('appearance-setting', [SettingController::class, 'updateAppearanceSetting'])->name('appearance-setting.update');
+
+  // ***Role And Permission***  //
+  Route::get('role', [RolePermissionController::class, 'index'])->name('role.index');
+  Route::get('role/create', [RolePermissionController::class, 'create'])->name('role.create');
+  Route::post('role/create', [RolePermissionController::class, 'store'])->name('role.store');
+  Route::get('role/{id}/edit', [RolePermissionController::class, 'edit'])->name('role.edit');
+  Route::post('role/{id}/update', [RolePermissionController::class, 'update'])->name('role.update');
+  Route::delete('role/{id}/destroy', [RolePermissionController::class, 'delete'])->name('role.destroy');
+
+  //*** Admin  User Route ***//
+  Route::resource('role-users', RoleUserController::class);
 });
